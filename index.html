@@ -428,6 +428,8 @@
       #lower .icon-svg path,#lower .icon-svg rect,#lower .icon-svg circle,#lower .icon-svg polyline,#lower .icon-svg line,#lower .icon-svg polygon{stroke:var(--ink);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;}
       #lower .icon-svg .accent{fill:var(--acc-line); stroke:none;}
       #lower .grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:38px;}
+      #lower .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:38px;}
+      @media(max-width:860px){#lower .grid3{grid-template-columns:1fr;}}
       #lower .card{background:var(--white);border:2px solid var(--ink);border-radius:10px;padding:26px 22px 28px;box-shadow:var(--sh-md);transition:transform .1s,box-shadow .1s;}
       #lower .card:hover{transform:translate(-3px, -3px);box-shadow:var(--sh-lg);}
       #lower .card h3{font-size:1.12rem;font-weight:800;margin:0 0 10px;letter-spacing:-.02em;text-transform:uppercase;}
@@ -642,7 +644,7 @@
             >
           </h1>
           <p class="sub">We will build your personal brand on LinkedIn and Twitter/X.</p>
-          <p class="tert">High-conversion content that turns 2.7x more strangers into clients within 60 days.<br class="brk" /><span class="tnote">(in just 45 minutes of your time per month)</span></p>
+          <p class="tert">High-conversion content that turns 2.7x more strangers into clients within 60 days.<br class="brk" /><span class="tnote">(in just 30-45 minutes of your time per month)</span></p>
 
           <p class="forge">
             <i aria-hidden="true"></i><span><b>Human-made content.</b> Stress tested by our custom AI agent stack.</span
@@ -671,7 +673,7 @@
         <div class="wrap">
           <div class="label rv"><b>01</b> / Pain points</div>
           <h2 class="h2 rv">Don't be like <em>JOHNNY.</em></h2>
-          <p class="lede rv">Most founders are leaving countless opportunities on the table because they treat their online presence like an afterthought. <b>Here is why it's failing:</b></p>
+          <p class="lede rv">Johnny doesn't have an online presence in 2026. He is leaving countless opportunities on the table during <b>the greatest gold rush known to man.</b> Here is why Johnny can't get any leads:</p>
 
           <div class="grid4 rv">
             <div class="card">
@@ -727,7 +729,7 @@
         <div class="wrap">
           <div class="label rv"><b>02</b> / How we solve it</div>
           <h2 class="h2 rv">The <em>PSYOP</em> Playbook:</h2>
-          <p class="lede rv">One 45-minute interview and whatever notes you already have become a month of content plus a strategy to match. After that we need about <b>45 minutes of your time a month</b> - send voice notes, half-formed ideas, or nothing at all. Here's the exact playbook:</p>
+          <p class="lede rv">It starts with one 45-minute onboarding interview. We go through the transcript, anything you have already written, and the competitors who are killing it in your space - and come back with your first batch of content, written in your voice. From there on we need 30-45 minutes of your time a month. Here is the exact playbook:</p>
 
           <div class="flow rv">
             <div class="step-row">
@@ -788,10 +790,51 @@
         </div>
       </section>
 
+      <!-- 03 / THE GUARANTEE -->
+      <section class="sec" id="guarantee">
+        <div class="wrap">
+          <div class="label rv"><b>03</b> / The guarantee</div>
+          <h2 class="h2 rv">We rewrite until you're <em>100% satisfied.</em> Or you don't pay.</h2>
+          <p class="lede rv">If the first batch doesn't read like something you'd be proud of writing yourself, we iterate until it does. <b>You pay nothing until you are 100% satisfied with the content we make.</b></p>
+
+          <div class="grid3 rv">
+            <div class="card">
+              <svg class="icon-svg" viewBox="0 0 24 24">
+                <path class="accent" d="M3 12a9 9 0 1 0 3-6.7"></path>
+                <path d="M3 12a9 9 0 1 0 3-6.7"></path>
+                <polyline points="3 3 3 8.5 8.5 8.5"></polyline>
+              </svg>
+              <h3>Unlimited rewrites on batch one</h3>
+              <p>We keep going until the voice is right. No revision counter, no hidden fees.</p>
+            </div>
+
+            <div class="card">
+              <svg class="icon-svg" viewBox="0 0 24 24">
+                <path class="accent" d="M20 6L9 17l-5-5"></path>
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <h3>Nothing publishes without your yes</h3>
+              <p>Every post is approved by you before it goes live. Your word is final.</p>
+            </div>
+
+            <div class="card">
+              <svg class="icon-svg" viewBox="0 0 24 24">
+                <path class="accent" d="M9 18l6-6-6-6"></path>
+                <path d="M14 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4"></path>
+                <polyline points="9 17 14 12 9 7"></polyline>
+                <line x1="14" y1="12" x2="3" y2="12"></line>
+              </svg>
+              <h3>Month to month, always</h3>
+              <p>No lock-in and no notice period. You stay because it pays, not because you signed something.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- CLOSE -->
       <section class="sec close" id="contact">
         <div class="wrap">
-          <div class="label rv"><b>03</b> / Get started</div>
+          <div class="label rv"><b>04</b> / Get started</div>
           <h2 class="rv">The best time to start was <em>4 years ago.</em><br />The second best time is now.</h2>
           <p class="rv">Just do it.</p>
           <div class="cta rv">
