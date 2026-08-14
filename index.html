@@ -397,7 +397,7 @@
 
       /* --- mobile: bigger headline, better-fitting sub and results line --- */
       @media(max-width:720px){
-        #hero{padding-left:12px;padding-right:12px}
+        #hero{padding-left:11px;padding-right:11px}
         #hero h1{font-size:min(clamp(2.8rem,14vw,5rem),18svh);line-height:.92;letter-spacing:-.045em}
         /* the money line can't wrap — hold it a step down so the other
            two lines can run as large as the screen allows */
@@ -465,7 +465,7 @@
         color:var(--steel);opacity:1;letter-spacing:.06em;
       }
       @media(max-width:720px){
-        #hero .tert .tnote{display:block;margin-top:.5em}
+        #hero .tert .tnote{display:block;margin-top:.5em;white-space:nowrap}
       }
 
       /* button label: bigger, heavier, better spaced */
@@ -489,15 +489,15 @@
         #hero h1 .range{font-size:1.16em;line-height:.94;letter-spacing:-.055em}
       }
       @media(max-width:720px){
-        #hero h1{font-size:min(clamp(2.1rem,10.4vw,4.4rem),16svh);line-height:.98;letter-spacing:-.04em}
+        #hero h1{font-size:min(clamp(2.15rem,10.8vw,4.6rem),16.6svh);line-height:.97;letter-spacing:-.042em}
         #hero h1 .line{line-height:1}
-        #hero h1 .range{font-size:1.14em;line-height:.92;letter-spacing:-.062em}
+        #hero h1 .range{font-size:1.14em;line-height:.91;letter-spacing:-.072em}
       }
 
       /* --- mobile: two lines each, not three --- */
       @media(max-width:720px){
         #hero .sub{max-width:none;white-space:nowrap;font-size:min(clamp(14.5px,4.85vw,1.5rem),3.1svh);line-height:1.26}
-        #hero .tert{max-width:36ch;font-size:min(clamp(12.5px,3.3vw,14.5px),1.95svh);line-height:1.5}
+        #hero .tert{max-width:41ch;font-size:min(clamp(12.5px,3.3vw,14.5px),1.95svh);line-height:1.5}
         #hero .tert .tnote{margin-top:2px}
         #hero .forge{max-width:26ch;font-size:min(clamp(9px,2.7vw,10.5px),1.4svh);letter-spacing:.06em;line-height:1.45}
       }
