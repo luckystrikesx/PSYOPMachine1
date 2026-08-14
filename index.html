@@ -394,6 +394,29 @@
       /* the money line can't wrap, so buy it width with tighter tracking */
       #hero h1 .range{letter-spacing:-.05em}
       #hero h1 .line--from{letter-spacing:-.045em}
+
+      /* --- mobile: bigger headline, better-fitting sub and results line --- */
+      @media(max-width:720px){
+        #hero{padding-left:12px;padding-right:12px}
+        #hero h1{font-size:min(clamp(2.8rem,14vw,5rem),18svh);line-height:.92;letter-spacing:-.045em}
+        /* the money line can't wrap — hold it a step down so the other
+           two lines can run as large as the screen allows */
+        #hero h1 .range{font-size:.76em;letter-spacing:-.058em}
+
+        #hero .sub{max-width:19ch;line-height:1.24;letter-spacing:-.016em;
+                   font-size:min(clamp(1.28rem,5.6vw,1.85rem),3.4svh);
+                   margin:0 auto}
+        #hero .tert{max-width:31ch;line-height:1.5;letter-spacing:.01em;
+                    font-size:min(clamp(14.5px,3.8vw,17px),2.1svh)}
+        #hero .tert .tnote{margin-top:3px}
+        #hero .forge{font-size:min(clamp(9.5px,2.9vw,11.5px),1.5svh);letter-spacing:.07em;max-width:30ch}
+      }
+
+      /* --- new order: sub -> button -> results line -> stamp --- */
+      #hero .cta-row{margin-top:clamp(16px,2.8svh,32px)}
+      #hero .assure{margin-top:clamp(7px,1.4svh,14px)}
+      #hero .tert{margin-top:clamp(18px,3.2svh,34px)}
+      #hero .forge{margin-top:clamp(10px,1.9svh,20px)}
     
       /* ==== LOWER SITE — original design, hero palette ==== */
       #lower{
@@ -654,13 +677,7 @@
             >
           </h1>
           <p class="sub">We will build your personal brand on LinkedIn and Twitter/X.</p>
-          <p class="tert">High-conversion content that turns 2.7x more strangers into clients within 60 days.<br class="brk" /><span class="tnote">(in just 30-45 minutes of your time per month)</span></p>
-
-          <p class="forge">
-            <i aria-hidden="true"></i><span><b>Human-made content.</b> Stress tested by our custom AI agent stack.</span
-            ><i aria-hidden="true"></i>
-          </p>
-          <div class="cta-row">
+                    <div class="cta-row">
             <a
               class="btn btn--primary"
               data-cta="hero-call"
@@ -671,6 +688,13 @@
             >
           </div>
           <p class="assure">Response within 24 hours</p>
+
+<p class="tert">High-conversion content that turns 2.7x more strangers into clients within 60 days.<br class="brk" /><span class="tnote">(in just 30-45 minutes of your time per month)</span></p>
+
+          <p class="forge">
+            <i aria-hidden="true"></i><span><b>Human-made content.</b> Stress tested by our custom AI agent stack.</span
+            ><i aria-hidden="true"></i>
+          </p>
         </div>
       </section>
     </main>
