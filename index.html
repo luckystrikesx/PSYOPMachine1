@@ -460,16 +460,12 @@
 
       /* the time note reads as a bracketed spec, not an orphaned parenthesis */
       #hero .tert .tnote{
-        display:inline-flex;align-items:center;gap:.5em;
+        display:inline;
         margin-top:0;font-size:.88em;font-weight:500;
         color:var(--steel);opacity:1;letter-spacing:.06em;
       }
-      #hero .tert .tnote::before,
-      #hero .tert .tnote::after{
-        content:"";width:1.15em;height:1px;background:var(--hair);flex:none;
-      }
       @media(max-width:720px){
-        #hero .tert .tnote{display:flex;justify-content:center;margin-top:.55em}
+        #hero .tert .tnote{display:block;margin-top:.5em}
       }
 
       /* button label: bigger, heavier, better spaced */
@@ -638,6 +634,55 @@
 @media(max-width:520px){#lower .ngrid{grid-template-columns:1fr;}}
 @media(max-width:760px){#lower .op{grid-template-columns:1fr;gap:26px;}}
 @media(max-width:420px){#lower .close .cta,#lower .close .cta .btn{width:100%;}#lower .close .cta .btn{justify-content:center;}}
+      /* ==========================================================
+         MOBILE — reclaim the dead space, then spend it on breathing room
+         ========================================================== */
+      @media(max-width:720px){
+
+        /* the hero was forced to 100svh and centred, so ~300px of empty
+           paper sat above and below a 470px stack. Size it to content. */
+        #hero{
+          min-height:auto;
+          align-items:flex-start;
+          padding:clamp(68px,9.5vh,104px) 14px clamp(56px,7.5vh,86px);
+        }
+
+        /* gaps now come from the freed space, not from svh fractions */
+        #hero h1{margin:0 0 26px}
+        #hero .sub{margin:0 auto}
+        #hero .cta-row{margin-top:30px}
+        #hero .tert{margin-top:34px}
+        #hero .forge{margin-top:22px}
+        #hero .cta-row .btn{height:58px}
+
+        /* lower sections: more room between and inside blocks */
+        #lower .sec{padding-top:clamp(60px,13vw,88px);padding-bottom:clamp(60px,13vw,88px)}
+        #lower .wrap{padding-left:22px;padding-right:22px}
+        #lower .label{margin-bottom:18px}
+        #lower .h2{max-width:16ch;margin-bottom:0}
+        #lower .lede{margin-top:16px;max-width:40ch;line-height:1.62}
+
+        #lower .grid4,#lower .grid3{gap:14px;margin-top:32px}
+        #lower .card{padding:24px 20px 26px}
+        #lower .card h3{margin-bottom:10px;line-height:1.22}
+        #lower .card p{line-height:1.6}
+        #lower .icon-svg{margin-bottom:14px}
+
+        #lower .flow{margin-top:32px;gap:14px}
+        #lower .step-row{padding:24px 20px;gap:16px}
+        #lower .step-txt h3{margin-bottom:8px}
+        #lower .step-txt p{line-height:1.6}
+
+        #lower .close{padding-top:clamp(76px,16vw,104px);padding-bottom:clamp(76px,16vw,104px)}
+        #lower .close h2{max-width:18ch}
+        #lower .close p{margin-top:16px;margin-bottom:28px;max-width:28ch}
+      }
+
+      /* very short phones in landscape: nothing forced, just scroll */
+      @media(max-width:720px) and (max-height:520px){
+        #hero{padding-top:56px;padding-bottom:48px}
+      }
+
     </style>
   </head>
   <body>
@@ -789,7 +834,7 @@
               >From <span class="chip chip--x" role="img" aria-label="X"><svg viewBox="-13.5 0 1227 1227" xmlns="http://www.w3.org/2000/svg"><path d="M714.163 519.284 1160.89 0H1055.03L667.137 450.887 357.328 0H0L468.492 681.821 0 1226.37H105.866L515.491 750.218 842.672 1226.37H1200L714.163 519.284ZM569.165 687.828 521.697 619.934 144.011 79.6944H306.615L611.412 515.685 658.88 583.579 1055.08 1150.3H892.476L569.165 687.828Z"/></svg></span><span class="chip chip--in chip--librand" role="img" aria-label="LinkedIn"><svg viewBox="3 3 18 18" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286z"/><path d="M5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065z"/><path d="M7.119 20.452H3.555V9h3.564v11.452z"/></svg></span>?</span
             >
           </h1>
-          <p class="sub">We'll build your personal LinkedIn and Twitter/X brand</p>
+          <p class="sub">We'll build your LinkedIn and Twitter/X personal brand</p>
                     <div class="cta-row">
             <a
               class="btn btn--primary"
@@ -801,12 +846,7 @@
             >
           </div>
 
-<p class="tert">High-conversion content turns 2.7x viewers into clients in 60 days<br class="brk" /><span class="tnote">Just 30&ndash;45 min of your time a month</span></p>
-
-          <p class="forge">
-            <i aria-hidden="true"></i><span><b>Human-made content.</b> Stress tested by our custom AI agent stack.</span
-            ><i aria-hidden="true"></i>
-          </p>
+<p class="tert">High-conversion content turns 2.7x viewers into clients in 60 days<br class="brk" /><span class="tnote">(in just 45 min of your time per month)</span></p>
         </div>
       </section>
     </main>
