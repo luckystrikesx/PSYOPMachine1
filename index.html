@@ -384,6 +384,16 @@
         #hero .sub{font-size:min(clamp(22px,2.35vw,31px),3.1svh)}
         #hero .tert{font-size:min(clamp(15px,1.42vw,18.5px),2.15svh);letter-spacing:.03em;line-height:1.62}
       }
+
+      /* --- headline: as large as the column and the fold allow --- */
+      #hero{padding-left:clamp(14px,4vw,32px);padding-right:clamp(14px,4vw,32px)}
+      #hero h1{font-size:min(clamp(2.35rem,11.5vw,9.6rem),15.5svh);
+               line-height:.95;letter-spacing:-.04em;
+               margin:0 0 clamp(12px,2.3svh,26px)}
+      @media(min-width:760px){#hero h1{letter-spacing:-.052em}}
+      /* the money line can't wrap, so buy it width with tighter tracking */
+      #hero h1 .range{letter-spacing:-.05em}
+      #hero h1 .line--from{letter-spacing:-.045em}
     
       /* ==== LOWER SITE — original design, hero palette ==== */
       #lower{
