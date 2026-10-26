@@ -193,7 +193,7 @@
       .nav-cta .short { display: none; }
       .nav-toggle { display: none; position: relative; }
 
-      .hero { padding: clamp(56px, 7vw, 96px) 0 clamp(72px, 8vw, 112px); }
+      .hero { padding: clamp(44px, 5vw, 64px) 0 16px; }
       .promise {
         display: inline-flex;
         align-items: center;
@@ -218,10 +218,9 @@
         padding: 6px;
       }
       .hero h1 {
-        font-size: clamp(2.7rem, 5.5vw, 5.35rem);
-        line-height: 0.98;
+        font-size: clamp(2.9rem, 7.8vw, 7.15rem);
+        line-height: 0.96;
         letter-spacing: -0.035em;
-        max-width: 11em;
       }
       .hero h1 .mark {
         background-color: var(--mark);
@@ -231,10 +230,11 @@
         -webkit-box-decoration-break: clone;
         white-space: nowrap;
       }
-      .hero .lede { margin-top: 26px; max-width: 38rem; }
-      .hero-actions { margin-top: 28px; }
+      .hero .lede { margin-top: 20px; max-width: 38rem; }
+      .hero-actions { margin-top: 20px; }
 
       .proof { background: var(--white); text-align: center; }
+      .proof.section { padding-top: 8px; }
       .proof .kicker { justify-content: center; }
       .bignum {
         font-family: var(--serif);
@@ -317,23 +317,27 @@
       .card p { color: var(--graphite); font-size: 1rem; line-height: 1.55; }
 
       .playbook { background: var(--white); }
-      .steps { list-style: none; margin-top: 12px; padding: 0; }
-      .step {
+      .steps {
+        list-style: none;
+        margin-top: 36px;
+        padding: 0;
         display: grid;
-        grid-template-columns: auto 1fr;
-        gap: 8px 28px;
-        align-items: start;
-        padding: 32px 0;
-        border-top: 1px solid var(--line);
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
       }
-      .step:last-child { border-bottom: 1px solid var(--line); }
+      .step {
+        background: var(--paper);
+        border-radius: 18px;
+        padding: 28px 26px 30px;
+        transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+      }
       .step .n {
+        display: block;
         font-family: var(--serif);
         font-size: clamp(2rem, 3vw, 2.6rem);
         line-height: 0.9;
         color: var(--blue);
-        min-width: 2.4ch;
-        padding-top: 4px;
+        margin-bottom: 12px;
       }
       .step h3 {
         font-family: var(--serif);
@@ -347,6 +351,7 @@
       .exhibit { background: var(--blue-soft); }
       .shot {
         margin-top: 36px;
+        max-width: 1000px;
         background: var(--white);
         border-radius: 20px;
         padding: 10px 10px 4px;
@@ -490,15 +495,8 @@
       .foot p { font-size: 0.92rem; }
       .foot a { color: var(--paper); font-weight: 600; }
 
-      .js .reveal {
-        opacity: 0;
-        transform: translateY(14px);
-        transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
-      }
-      .js .reveal.in { opacity: 1; transform: none; }
-
       @media (hover: hover) and (prefers-reduced-motion: no-preference) {
-        .card:hover {
+        .card:hover, .step:hover {
           transform: translateY(-4px);
           box-shadow: 0 16px 40px rgba(18, 17, 16, 0.06);
         }
@@ -509,6 +507,7 @@
       }
 
       @media (max-width: 800px) {
+        .steps { grid-template-columns: 1fr; }
         .nav { height: 64px; }
         .nav-links { display: none; }
         .nav-toggle { margin-left: auto; }
@@ -567,9 +566,9 @@
 
       @media (max-width: 420px) {
         .wrap, .narrow, .guarantee .wrap { width: min(var(--max), calc(100% - 32px)); }
-        .hero h1 { font-size: 2.35rem; }
         .promise { border-radius: 16px; align-items: flex-start; }
-        .metrics div { padding-inline: 8px; }
+        .metrics div { padding-inline: 6px; }
+        .metrics dt { font-size: 0.72rem; }
         .card { padding: 24px 20px 26px; }
         .step { gap: 14px; }
         .foot { align-items: flex-start; }
@@ -583,10 +582,8 @@
           animation: none !important;
           transition: none !important;
         }
-        .js .reveal { opacity: 1; transform: none; }
       }
     </style>
-    <script>document.documentElement.classList.add("js");</script>
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
@@ -780,7 +777,7 @@
         <div class="wrap">
           <p class="kicker reveal"><i aria-hidden="true"></i> Exhibit A</p>
           <h2 class="reveal">Account overview, 4 weeks.</h2>
-          <p class="lede reveal">The same four weeks, on the record. Impressions reached 54,423 on Aug 23.</p>
+          <p class="lede reveal">Impressions reached 54,423 on Aug 23.</p>
           <figure class="shot reveal">
             <img
               src="assets/exhibit-a.png"
@@ -927,24 +924,6 @@
     <script>
       (function () {
         "use strict";
-        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        var nodes = document.querySelectorAll(".reveal");
-        if (!reduce && "IntersectionObserver" in window) {
-          var io = new IntersectionObserver(
-            function (entries) {
-              entries.forEach(function (entry) {
-                if (!entry.isIntersecting) return;
-                entry.target.classList.add("in");
-                io.unobserve(entry.target);
-              });
-            },
-            { threshold: 0.14, rootMargin: "0px 0px -8% 0px" }
-          );
-          nodes.forEach(function (el) { io.observe(el); });
-        } else {
-          nodes.forEach(function (el) { el.classList.add("in"); });
-        }
-
         document.querySelectorAll(".nav-toggle a").forEach(function (link) {
           link.addEventListener("click", function () {
             var menu = link.closest("details");
