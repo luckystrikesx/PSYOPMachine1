@@ -215,6 +215,19 @@
       /* ===== NEW — shorter subheading on phones only (desktop text unchanged) ===== */
       #hero .sub .sub-m{display:none}
       @media(max-width:720px){#hero .sub .sub-d{display:none}#hero .sub .sub-m{display:inline}#hero .sub{max-width:30ch}}
+      /* ===== NEW — mobile: hero fills the first screen (capped at 760px so the next section peeks on tall phones), spare height shared evenly, same side margins as the sections below ===== */
+      @media(max-width:720px){
+        #hero{box-sizing:border-box;min-height:min(100vh,760px);min-height:min(100svh,760px);align-items:stretch;padding:clamp(20px,3svh,32px) clamp(16px,5.6vw,22px)}
+        #hero .inner{display:flex;flex-direction:column;width:100%;min-height:calc(min(100vh,760px) - 2 * clamp(20px,3svh,32px));min-height:calc(min(100svh,760px) - 2 * clamp(20px,3svh,32px))}
+        #hero .promise{margin:auto 0 clamp(14px,2.6svh,24px)}
+        #hero h1.display{margin:0 0 clamp(10px,2.2svh,20px)}
+        #hero .exhibit{width:100%;margin:auto 0 0;padding-top:clamp(16px,3svh,28px)}
+        #hero .cta-row{margin:auto 0;padding-top:clamp(16px,3svh,28px)}
+        #hero .cta-row .btn{width:100%;max-width:420px;box-sizing:border-box;padding-left:16px;padding-right:16px}
+      }
+      @media(max-width:400px){#hero .cta-row .btn{letter-spacing:.05em}}
+      @media(max-width:340px){#hero .cta-row .btn{font-size:11.5px;letter-spacing:.03em;padding-left:12px;padding-right:12px}}
+      @media(max-width:720px){#lower #pain{padding-top:32px}}
     </style>
   </head>
   <body>
