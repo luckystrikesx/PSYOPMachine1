@@ -475,6 +475,31 @@
         #lower .dm-shot{border-width:1px;border-radius:5px}
         #lower .dm:hover{transform:none;box-shadow:3px 3px 0 var(--ink)}
       }
+      /* ===== NEW — proof row under the hero ===== */
+      #hero .proof{margin-top:clamp(28px,4svh,44px);text-align:left}
+      #hero .proof-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:0;border-top:2px solid var(--ink);border-bottom:1px solid var(--hair)}
+      #hero .proof-row > div{display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:6px;padding:14px 18px 14px;border-left:1px solid var(--hair);min-width:0}
+      #hero .proof-row > div:first-child{border-left:0;padding-left:0}
+      #hero .proof-row dd{margin:0;font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(26px,2.5vw,38px);line-height:1;letter-spacing:-.035em;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+      #hero .proof-row dd small{font-size:.5em;font-weight:800;letter-spacing:-.01em;margin-left:.08em;color:var(--steel)}
+      #hero .proof-arw{color:var(--wire);font-size:.75em;margin:0 .14em;position:relative;top:-.06em}
+      #hero .proof-row dt{font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;line-height:1.35;color:var(--steel)}
+      #hero .proof-src{display:inline-block;margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--wire);text-decoration:none}
+      #hero .proof-src:hover{color:var(--ink);text-decoration:underline}
+      @media(min-width:1000px){#hero .proof{grid-column:1 / -1;grid-row:6}}
+      @media(max-width:999px){
+        #hero .proof{width:100%;max-width:640px;margin-left:auto;margin-right:auto}
+        #hero .proof-row{grid-template-columns:repeat(2,minmax(0,1fr))}
+        #hero .proof-row > div{padding:12px 12px 12px 14px}
+        #hero .proof-row > div:nth-child(odd){border-left:0;padding-left:0}
+        #hero .proof-row > div:nth-child(n+3){border-top:1px solid var(--hair)}
+      }
+      @media(max-width:720px){
+        #hero .proof{margin-top:28px}
+        #hero .proof-row dd{font-size:clamp(19px,6vw,26px)}
+        #hero .proof-row dt{font-size:9.5px;letter-spacing:.08em}
+      }
+      #lower .close .cl-act .cl-go{margin-top:clamp(28px,3vw,40px)}
     </style>
   </head>
   <body>
@@ -491,7 +516,7 @@
     <header id="topbar" aria-label="Site bar">
       <div class="wrap">
         <div class="bar-right">
-          <a class="btn btn--primary" data-cta="topbar-call" href="https://calendly.com/personalghostwriter/30-minute-meeting-clone" target="_blank" rel="noopener noreferrer">Apply to start your first 7 days</a>
+          <a class="btn btn--primary" data-cta="topbar-call" href="https://calendly.com/psyopmachine/30-minute-meeting-clone" target="_blank" rel="noopener noreferrer">Apply to start your first 7 days</a>
         </div>
       </div>
     </header>
@@ -519,7 +544,16 @@
           </figure>
 
           <div class="cta-row">
-            <a class="btn btn--primary" data-cta="hero-call" href="https://calendly.com/personalghostwriter/30-minute-meeting-clone" target="_blank" rel="noopener noreferrer"><span class="lbl">Apply to start your first 7 days</span><svg class="arw" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn--primary" data-cta="hero-call" href="https://calendly.com/psyopmachine/30-minute-meeting-clone" target="_blank" rel="noopener noreferrer"><span class="lbl">Apply to start your first 7 days</span><svg class="arw" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <div class="proof rv" aria-label="Client results">
+            <dl class="proof-row">
+              <div><dt>Calls booked in one week</dt><dd>19</dd></div>
+              <div><dt>LinkedIn followers in 2 months</dt><dd>150<span class="proof-arw" aria-hidden="true">&rarr;</span>3,000</dd></div>
+              <div><dt>Impressions and 3 booked calls from 1&nbsp;post</dt><dd>50K+</dd></div>
+              <div><dt>Client won via LinkedIn</dt><dd>$1M+<small>/yr</small></dd></div>
+            </dl>
+            <a class="proof-src" href="#dms">From real client DMs &darr;</a>
           </div>
         </div>
       </section>
@@ -744,7 +778,7 @@
           </ul>
           <p class="g7-fine rv">Unlimited rewrites in week one &middot; Nothing goes live without your yes</p>
 
-          <div class="g7-cta rv"><a class="btn btn--g7" data-cta="guarantee" href="https://calendly.com/personalghostwriter/30-minute-meeting-clone" target="_blank" rel="noopener noreferrer">Apply to start your first 7 days<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a></div>
+          <div class="g7-cta rv"><a class="btn btn--g7" data-cta="guarantee" href="https://calendly.com/psyopmachine/30-minute-meeting-clone" target="_blank" rel="noopener noreferrer">Apply to start your first 7 days<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a></div>
         </div>
       </section>
 
@@ -802,7 +836,7 @@
             <div class="tq-card tq-card--cta" role="listitem">
               <p class="tq-cta-h">Want results like these?</p>
               <p class="tq-cta-p">Start with 7 days. Don&rsquo;t love them? Walk away and pay nothing.</p>
-              <a class="btn btn--g7" data-cta="testimonials" href="https://calendly.com/personalghostwriter/30-minute-meeting-clone" target="_blank" rel="noopener noreferrer">Start your first 7 days &rarr;</a>
+              <a class="btn btn--g7" data-cta="testimonials" href="https://calendly.com/psyopmachine/30-minute-meeting-clone" target="_blank" rel="noopener noreferrer">Start your first 7 days &rarr;</a>
             </div>
           </div>
           <p class="tq-swipe" aria-hidden="true">Swipe for more &rarr;</p>
@@ -816,8 +850,8 @@
             <div class="cl-copy">
               <div class="label rv"><b>07</b> / Get started</div>
               <h2 class="cl-h rv"><span class="cl-l">The best time to start was 4&nbsp;years ago.</span> <span class="cl-l">The second best time is&nbsp;now.</span></h2>
-              <div class="cl-act"><p class="cl-p rv">Don&rsquo;t love the first 7 days? Walk away and pay nothing.</p>
-              <div class="rv"><a class="btn btn--g7 cl-go" data-cta="close-call" href="https://calendly.com/personalghostwriter/30-minute-meeting-clone" target="_blank" rel="noopener noreferrer">Start your application<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a></div></div>
+              <div class="cl-act">
+              <div class="rv"><a class="btn btn--g7 cl-go" data-cta="close-call" href="https://calendly.com/psyopmachine/30-minute-meeting-clone" target="_blank" rel="noopener noreferrer">Start your application<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a></div></div>
             </div>
             <div class="cl-seal rv">
             <svg class="seal" viewBox="0 0 400 400" role="img" aria-label="PSYOPMachine seal">
@@ -885,7 +919,7 @@
         <section class="ap-pane ap-done" data-step="4" hidden>
           <h2 class="ap-h">You&rsquo;re in. Pick a time.</h2>
           <p class="ap-lede">Your calendar opened in a new tab. Your answers are already filled in, so it takes about 30 seconds.</p>
-          <a class="ap-next ap-cal" id="ap-cal" href="https://calendly.com/personalghostwriter/30-minute-meeting-clone" target="_blank" rel="noopener noreferrer">Open the calendar<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+          <a class="ap-next ap-cal" id="ap-cal" href="https://calendly.com/psyopmachine/30-minute-meeting-clone" target="_blank" rel="noopener noreferrer">Open the calendar<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
         </section>
 
         <div class="ap-foot" id="ap-foot">
@@ -900,7 +934,7 @@
     <dialog id="dm-view" class="dm-view" aria-label="Screenshot"><button type="button" class="dm-view-x" aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button><img id="dm-view-img" alt=""></dialog>
 
     <div id="mobilebar" aria-label="Quick actions">
-      <a class="btn btn--primary" data-cta="sticky-call" href="https://calendly.com/personalghostwriter/30-minute-meeting-clone" target="_blank" rel="noopener noreferrer">Apply to start your first 7 days</a>
+      <a class="btn btn--primary" data-cta="sticky-call" href="https://calendly.com/psyopmachine/30-minute-meeting-clone" target="_blank" rel="noopener noreferrer">Apply to start your first 7 days</a>
     </div>
 
     <script>
@@ -957,7 +991,7 @@
       /* Apply questionnaire: every Calendly link opens it; answers go to Calendly as name + a1..a3 */
       (function () {
         "use strict";
-        var CAL = "https://calendly.com/personalghostwriter/30-minute-meeting-clone";
+        var CAL = "https://calendly.com/psyopmachine/30-minute-meeting-clone";
         var dlg = document.getElementById("apply");
         if (!dlg || typeof dlg.showModal !== "function") return; // old browsers: links go straight to Calendly
         var form = document.getElementById("ap-form");
