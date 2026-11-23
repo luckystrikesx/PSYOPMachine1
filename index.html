@@ -1027,7 +1027,60 @@
       #hero .promise-box .pt{background:transparent!important}
       #lower .faq-i[open] summary::after{rotate:0deg!important;content:"\2212"!important}
       @media(max-width:720px) and (max-height:640px){#hero .exhibit{width:min(62%,calc(18svh * 1.63))!important;margin-top:14px!important}#hero .promise{margin-bottom:10px!important}#hero h1.display .range .hl{margin:.03em 0 .05em -.04em!important}}
-    </style>
+          /* ================= SPY EDIT (Nov 23): sharper, straighter, calmer backgrounds ================= */
+      :root{--rr:6px;--sh:5px 5px 0 #0F1B2D;--sh-sm:3px 3px 0 #0F1B2D;--paper2:#FBF8F2}
+      /* straighten everything */
+      #hero .promise-box,#hero .ex-frame,#lower .label,#lower .tq,#lower .tq-grid > .tq-card,#lower .dm-col .dm,#lower .g7-card{rotate:0deg!important}
+      #lower .card:hover,#lower .step-row:hover,#lower .tq-card:hover,#lower .dm:hover{transform:translate(-2px,-2px)!important;box-shadow:7px 7px 0 var(--k)!important}
+      /* the only tilt left: the money sticker */
+      #hero h1.display .range .hl{border-radius:4px!important;rotate:-1deg}
+      /* sharper corners everywhere */
+      #hero .cta-row .btn,#topbar .btn,#mobilebar .btn,#lower .btn,#lower .btn.btn--g7{border-radius:6px!important}
+      #hero h1.display .chip{border-radius:6px!important}
+      #lower .card,#lower .step-row,#lower .tq-card,#lower .faq-i,#lower .dm,#lower .wg,#lower .g7-card{border-radius:var(--rr)!important}
+      #hero .ex-frame{border-radius:var(--rr)!important}
+      #hero .ex-frame img,#lower .dm-shot img,#lower .dm img{border-radius:3px!important}
+      #lower .card .icon-svg,#lower #playbook .step-ic,#lower .wg-ck,#lower .faq-i summary::after{border-radius:4px!important}
+      #lower .tq-av,#lower .tq-av-sm{border-radius:4px!important}
+      /* backgrounds: two calm tones + navy */
+      #hero{background:
+          linear-gradient(rgba(15,27,45,.045) 1px,transparent 1px) 0 0/48px 48px,
+          linear-gradient(90deg,rgba(15,27,45,.045) 1px,transparent 1px) 0 0/48px 48px,
+          var(--paper2)!important}
+      #lower #dms,#lower #pain,#lower #faq{background:#F3EEE5!important}
+      #lower #what,#lower #playbook,#lower #testimonial{background:var(--paper2)!important}
+      #lower #playbook .h2,#lower #playbook .lede,#lower #playbook .lede *{color:var(--k)!important}
+      #lower #playbook .h2 em{color:var(--b)!important}
+      #lower #faq .h2 em{color:var(--b)!important;text-decoration:none}
+      #lower .pband{background:var(--k)!important}
+      #lower .pband .proof-row > div{border-color:rgba(255,255,255,.18)!important}
+      #lower .pband dd{color:#fff!important}
+      #lower .pband dt{color:#A9B6CB!important;opacity:1}
+      #lower .pband .proof-row > div:first-child dd,#lower .pband .proof-row > div:last-child dd{color:var(--o)!important}
+      #lower .pband .proof-arw{color:var(--o)!important}
+      /* dossier tabs instead of sticker pills */
+      #lower .label{background:var(--k)!important;color:#fff!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:6px 12px 6px 10px!important;font-size:.68rem!important;letter-spacing:.16em!important;border-left:4px solid var(--o)!important}
+      #lower .label b{color:var(--o)!important}
+      #lower .g7 .label,#lower .close .label{background:#fff!important;color:var(--k)!important}
+      /* promise badge: sharp tag */
+      #hero .promise-box{border-radius:4px!important;background:#fff!important;font-weight:600!important}
+      #hero .sub .pf{border-radius:3px;background:transparent;border:0;border-bottom:3px solid var(--o);padding:0}
+      /* hero screenshot: crosshair corners, no tilt */
+      #hero .ex-frame{box-shadow:8px 8px 0 var(--k)!important}
+      #hero .regmarks{display:block!important;opacity:.9}
+      /* calmer accents: yellow only as a small highlight */
+      #lower .wg-t tr.wg-g th{background:#F3EEE5!important;color:var(--k)!important;border-top:2px solid var(--k)!important;border-bottom:2px solid var(--k)!important}
+      #lower .card .icon-svg{background:var(--o)!important}
+      #lower .card .icon-svg .accent{fill:#fff!important}
+      #lower #playbook .step-ic,#lower #playbook .step-row:nth-child(n) .step-ic{background:var(--o)!important}
+      #lower .tq{background:var(--k)!important}
+      #lower .tq .tq-hl{background:var(--o)!important;color:var(--k)!important;border-radius:3px}
+      #lower .tq-av-sm{background:var(--o)!important}
+      #lower .g7-card-h{background:#F3EEE5!important}
+      #lower .g7-card-f{background:#fff!important}
+      #lower .faq-i summary::after{background:var(--o)!important}
+      #lower .faq-i[open]{border-left-width:var(--bw)!important}
+        </style>
   <noscript><style>.rv,#lower .rv,#lower .close h2.cl-h .cl-l{opacity:1!important;transform:none!important}#lower .tq-hl{background-size:100% 100%!important}#lower .g7-card .g7-list li::before{transform:none!important}</style></noscript>
   </head>
   <body>
