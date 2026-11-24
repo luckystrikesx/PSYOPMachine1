@@ -1,4 +1,51 @@
+# TNT Group: search engines and AI assistants are welcome.
 User-agent: *
+Allow: /
+
+# OpenAI (ChatGPT search, browsing, training)
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: GPTBot
+Allow: /
+
+# Anthropic (Claude)
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+
+# Google (Search, Gemini, AI Overviews)
+User-agent: Googlebot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+# Microsoft (Bing, Copilot; also feeds ChatGPT search)
+User-agent: Bingbot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# Apple, Meta, Common Crawl, DuckDuckGo, Mistral
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: meta-externalagent
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: DuckAssistBot
+Allow: /
+User-agent: MistralAI-User
 Allow: /
 
 Sitemap: https://tnt-group.co.uk/sitemap.xml
