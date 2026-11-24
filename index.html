@@ -1223,6 +1223,10 @@
 /* pain points: 3 cards */
 #pain .grid4.g3{grid-template-columns:repeat(3,minmax(0,1fr))!important}
 @media(max-width:860px){#pain .grid4.g3{grid-template-columns:1fr!important}}
+
+/* footer page links */
+#lower .cl-links,.cl-links{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:10px;font:600 .72rem/1.4 "IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase}
+.cl-links a{color:#bdbdbd!important;text-decoration:none}.cl-links a:hover{color:#FF7A1A!important}
 </style>
   <noscript><style>.rv,#lower .rv,#lower .close h2.cl-h .cl-l{opacity:1!important;transform:none!important}#lower .tq-hl{background-size:100% 100%!important}#lower .g7-card .g7-list li::before{transform:none!important}</style></noscript>
   </head>
@@ -1596,7 +1600,7 @@
             </svg>
             </div>
           </div>
-          <footer class="cl-foot cl-foot--min"><p class="cl-copy-l">&copy; 2026 TNT Group / All rights reserved.</p></footer>
+          <footer class="cl-foot cl-foot--min"><p class="cl-copy-l">&copy; 2026 TNT Group / All rights reserved.</p><nav class="cl-links" aria-label="More pages"><a href="/linkedin-ghostwriting/">LinkedIn ghostwriting</a><a href="/x-ghostwriting/">X ghostwriting</a><a href="/results/">Client results</a></nav></footer>
         </div>
       </section>
     </div>
@@ -1848,6 +1852,7 @@
           dlg.showModal();
         }
 
+        if (location.hash === "#apply") { open(); }
         document.addEventListener("click", function (e) {
           var a = e.target.closest('a[href^="' + CAL + '"]');
           if (!a || a.id === "ap-cal") return;
